@@ -14,4 +14,4 @@ echo "Running company.bar.bar_func..."
 echo "Running deptry on company.bar..."
 # deptry fails with pyproject.toml not being found when ROOT isn't ".", bug?
 #"$SCRIPT_DIR/venv/bin/python" -m deptry "$SCRIPT_DIR/company.bar" 
-$(cd "$SCRIPT_DIR/company.bar" && "$SCRIPT_DIR/venv/bin/python" -m deptry .)
+$(cd "$SCRIPT_DIR/company.bar" && "$SCRIPT_DIR/venv/bin/python" -m deptry . --experimental-namespace-package)
