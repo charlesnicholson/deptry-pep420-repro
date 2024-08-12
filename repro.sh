@@ -4,6 +4,7 @@ set -eEuo pipefail
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
 python3.11 -m venv "$SCRIPT_DIR/venv"
+"$SCRIPT_DIR/venv/bin/python" -m pip install --upgrade pip 
 "$SCRIPT_DIR/venv/bin/python" -m pip install deptry 
 "$SCRIPT_DIR/venv/bin/python" -m pip install -e "$SCRIPT_DIR/company.foo"
 "$SCRIPT_DIR/venv/bin/python" -m pip install -e "$SCRIPT_DIR/company.bar"
